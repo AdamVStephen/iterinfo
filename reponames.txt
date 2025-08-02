@@ -1,3 +1,4 @@
+# See also getall.sh
 Waveform-Editor
 IMAS-Data-Dictionary
 PCSSP
@@ -13,4 +14,3 @@ IMAS-Data-Dictionaries
 IMAS-Standard-Names
 PFC-Tritium-Transport
 Fusion-Conventions
-

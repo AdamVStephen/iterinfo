@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
-cat reponames.txt |
-	while read name
+#
+TARGET_DIRECTORY=../
+GITORG=iterorganization
+#
+cat reponames.txt | grep -v '#' |
+	while read repo
 	do
-		if [ ! -d $name ]
-			echo "Get $name"
+		if [ ! -d "${TARGET_DIRECTORY}${repo}" ]
+		then
+			#echo "Get $repo"
+			git clone "git@github.com:${GITORG}/${repo}" "${TARGET_DIRECTORY}$repo"
 		else 
-			echo "Got $name"
+			echo "Already cloned ${TARGET_DIRECTORY}${repo}"
 		fi
 	done
